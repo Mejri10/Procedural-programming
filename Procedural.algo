@@ -1,0 +1,35 @@
+PROCEDURE dot_product (VAR tab_A: ARRAY_OF INTEGER[3]; , VAR tab_B:ARRAY_OF INTEGER[3]; );
+VAR
+ i:INTEGER;
+ n:INTEGER;
+BEGIN
+    n := tab_A.length
+    product: INTEGER:= 0;
+FOR i FROM 0 TO n   DO
+  product= product + tab_A[i] * tab_B[i];
+END_FOR
+ Write(product)
+END
+ALGORITHM orthogonal
+VAR
+ tab_1:: ARRAY_OF INTEGER[3];
+ tab_2: ARRAY_OF INTEGER[3];
+ i : INTEGER;
+ BEGIN 
+//entrer le prmier vecteur
+ FOR i FROM 0 TO tab_1.length DO
+ Read(tab_1[i]); 
+     END_FOR 
+//entrer le deuxeiemme vecteur
+ FOR i FROM 0 TO tab_2.length DO
+ Read(tab_2[i]); 
+     END_FOR 
+ dot_product (tab_1,tab_2);
+ IF (product = 0) THEN
+   write('les vecteurs sont orthoghnaux')
+   ELSE (product<>0)THEN
+    write('les vecteurs ne sont pas orthoghnaux')
+ END_IF
+  Write(product)
+END
+
